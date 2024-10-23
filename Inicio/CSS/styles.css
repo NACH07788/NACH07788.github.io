@@ -1,47 +1,64 @@
+html {
+    height: 100%;
+    background-color: black;
+}
 
 body {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: Arial, sans-serif;
-}
-background {
     background-image: url('User image.png');
     background-size: cover;
-    height: 100vh;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: black;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
 }
 
-    header {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    justify-content: space-between; /* Alinea el logo a la izquierda y la barra de navegación a la derecha */
-    align-items: center; /* Alinea verticalmente en el centro */
-    padding: 5px 20px; /* Espaciado alrededor */
-}}
+
+main {
+    margin-top: 60px; /* Añade un margen para evitar que el contenido quede debajo de la barra de navegación */
+}
 
 .logo-container {
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
 }
+
+header {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px; /* Aumenta el padding para más espacio alrededor del contenido */
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 96%;
+    z-index: 1000;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Alinea los elementos de la lista en una fila */
+    display: flex;
+    gap: 20px; /* Usa `gap` para separar los elementos de la lista */
 }
 
     nav ul li {
-        margin-left: 2%;
+        margin-left: 0; /* Quita el margen izquierdo porque `gap` ya proporciona espacio */
     }
 
         nav ul li a {
             text-decoration: none;
             color: white;
             padding: 10px 15px;
-            background-color: #cb6ce6; /* Color del fondo de los botones */
-            border-radius: 20px;
+            background-color: #002255; /* Color del fondo de los botones */
+            border-radius: 10%;
             transition: background-color 0.3s ease;
         }
 
@@ -49,21 +66,64 @@ nav ul {
                 background-color: black; /* Cambia de color cuando pasas el mouse */
             }
 
-section {
-    background-color: #333333;
-    color: #ffffff;
-    padding: 500px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #000000;
-    display: flex;
-    margin: 20px;
 
+section {
+    background-color: black;
+    color: #ffffff;
+    padding: 5%;
+    text-align: center;
+    border-radius: 2%;
+    box-shadow: 0 0 10px #002255;
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
 }
-aside{
-    display:flex;
+
+aside {
+    flex: 1;
 }
+
+.sidebar {
+    padding: 5%;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    text-align: left;
+    align-content: center;
+}
+
+    .sidebar p {
+        color: black;
+    }
+
+.perfil-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+main {
+    flex: 1;
+    margin-top: 10%;
+}
+
+article {
+    flex: 3;
+    margin-right: 20px;
+}
+
 .btn-primary {
     background-color: orange !important;
     border-color: orange !important;
+}
+
+footer {
+    background-color: #002255;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative; /* Por defecto, el footer estará al final del contenido */
+    bottom: 0;
 }
